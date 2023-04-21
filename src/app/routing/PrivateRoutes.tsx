@@ -11,6 +11,7 @@ import React from 'react'
 
 const PrivateRoutes = () => {
   const ExamplePage = lazy(() => import('../modules/example/ExamplePage'))
+  const AdmTblDatPage = lazy(() => import('../modules/adm_tbl_dat/AdmTblDatPage'))
 
   return (
     <Routes>
@@ -30,6 +31,16 @@ const PrivateRoutes = () => {
             </SuspensedView>
           }
         />
+
+        <Route
+          path='crafted/adm_tbl_dat/*'
+          element={
+            <SuspensedView>
+              <AdmTblDatPage />
+            </SuspensedView>
+          }
+        />
+
         {/* Page Not Found */}
         <Route path='*' element={<Navigate to='/error/404' />} />
       </Route>

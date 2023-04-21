@@ -28,7 +28,7 @@ const SidebarMenuMain = () => {
         </div>
       </div>
       <SidebarMenuItemWithSub
-        to='/crafted/example'
+        to='/crafted/pages/example'
         title={intl.formatMessage({id: 'MENU.EXAMPLE'})}
         fontIcon='bi-archive'
         icon='/media/icons/duotune/general/gen022.svg'
@@ -40,6 +40,24 @@ const SidebarMenuMain = () => {
         />
         <SidebarMenuItem
           to='/crafted/pages/example/create'
+          title='Create'
+          hasBullet={true}
+        />
+      </SidebarMenuItemWithSub>
+
+      <SidebarMenuItemWithSub
+        to='/crafted/adm_tbl_dat'
+        title={intl.formatMessage({id: 'MENU.ADM_TBL_DAT'})}
+        fontIcon='bi-archive'
+        icon='/media/icons/duotune/general/gen022.svg'
+      >
+        <SidebarMenuItem
+          to='/crafted/adm_tbl_dat/overview'
+          title='Overview'
+          hasBullet={true}
+        />
+        <SidebarMenuItem
+          to='/crafted/adm_tbl_dat/create'
           title='Create'
           hasBullet={true}
         />
